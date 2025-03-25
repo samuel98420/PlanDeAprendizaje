@@ -1,0 +1,34 @@
+<br>
+<div class="table-container">
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.description }}</td>
+        <td class="button-group">
+          <button (click)="editProduct(product)">Edit</button>
+          <button (click)="confirmDelete(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal-overlay" *ngIf="isEditModalOpen">
+  <div class="modal">
+    <app-product-form 
+      [product]="productToEdit"
+      (close)="isEditModalOpen=false">
+    </app-product-form>
+  </div>
+</div>
