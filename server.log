@@ -1,0 +1,65 @@
+2025/02/26 16:25:32 main.go:23: 🚀 Servidor iniciado y registro de eventos activado
+2025/02/26 16:29:10 main.go:23: 🚀 Servidor iniciado y registro de eventos activado
+2025/02/27 11:37:32 main.go:23: 🚀 Servidor iniciado y registro de eventos activado
+2025/02/27 11:46:00 main.go:101: ❌ Error al decodificar JSON: EOF
+2025/02/27 12:06:24 main.go:101: ❌ Error al decodificar JSON: EOF
+2025/02/27 12:07:03 main.go:101: ❌ Error al decodificar JSON: EOF
+2025/02/27 12:13:21 main.go:101: ❌ Error al decodificar JSON: EOF
+2025/02/27 12:21:50 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:22:25 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:23:57 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:39:16 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:39:20 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:39:39 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:41:18 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:41:32 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:42:51 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:42:55 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:44:10 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:44:14 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:44:37 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:46:52 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:50:20 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:50:43 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:50:51 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 12:53:28 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 13:00:50 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 13:05:39 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 13:12:06 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 13:12:09 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 13:12:42 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 13:21:27 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 13:25:05 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 14:00:14 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 14:00:18 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 14:56:05 main.go:131: ❌ Error al decodificar JSON: EOF
+2025/02/27 14:59:34 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:01:22 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:05:52 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:14:24 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:18:27 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:23:54 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:32:19 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:38:57 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:40:17 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:44:42 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:47:06 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:47:12 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:47:16 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:47:18 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:47:33 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:51:13 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:51:25 main.go:167: ❌ ID inválido: strconv.Atoi: parsing "": invalid syntax
+2025/02/27 15:51:59 main.go:22: 🚀 Servidor iniciado y registro de eventos activado
+2025/02/27 15:52:07 main.go:59: ❌ Error al convertir ID: 3 , error: strconv.Atoi: parsing "3 ": invalid syntax
+2025/02/27 15:52:13 main.go:59: ❌ Error al convertir ID: 3 , error: strconv.Atoi: parsing "3 ": invalid syntax
+2025/02/27 15:52:34 main.go:63: ✅ ID recibido y convertido manualmente: 3
+2025/02/27 15:52:46 main.go:63: ✅ ID recibido y convertido manualmente: 3
+2025/02/27 15:52:46 taskService.go:143: 🔍 Ejecutando consulta DELETE para ID: 3
+2025/02/27 16:16:21 main.go:63: ✅ ID recibido y convertido manualmente: 2
+2025/02/27 16:16:52 main.go:63: ✅ ID recibido y convertido manualmente: 2
+2025/02/27 16:16:59 main.go:63: ✅ ID recibido y convertido manualmente: 2
+2025/02/27 16:17:20 main.go:59: ❌ Error al convertir ID: 2 , error: strconv.Atoi: parsing "2 ": invalid syntax
+2025/02/27 16:17:24 main.go:63: ✅ ID recibido y convertido manualmente: 2
+2025/02/28 09:49:02 main.go:23: 🚀 Servidor iniciado y registro de eventos activado
+2025/03/06 21:02:44 main.go:23: Servidor iniciado y registro de eventos activado
