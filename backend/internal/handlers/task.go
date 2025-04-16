@@ -1,19 +1,23 @@
 package handlers
 
 import (
-	"encoding/json"
-	"github.com/tuusuario/todo-api/backend/internal/database"
-	"github.com/tuusuario/todo-api/backend/internal/models"
-    "github.com/tuusuario/todo-api/backend/internal/errors"
-	"net/http"
-	"strconv"
+	// ... otros imports
+	"github.com/tuusuario/todo-api/backend/internal/errors"
+	"github.com/sirupsen/logrus"
 )
 
 func GetTasks(w http.ResponseWriter, r *http.Request) {
+	logger := r.Context().Value("logger").(*logrus.Logger)
+	
 	tasks, err := database.GetTasks()
 	if err != nil {
+		logger.WithFields(logrus.Fields{
+			"error": err,
+			"db":   "sqlite",
+		}).Error("database_error")
+		
 		errors.RespondWithError(w, http.StatusInternalServerError, 
-			"Error al obtener tareas", 
+			"Could not fetch tasks", 
 			err.Error())
 		return
 	}
