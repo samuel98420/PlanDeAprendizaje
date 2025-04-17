@@ -5,14 +5,21 @@ import (
 	"fmt"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/sirupsen/logrus"
-	"github.com/tuusuario/todo-api/backend/internal/models"
+
+
 )
 
 var db *sql.DB
 var log = logrus.WithField("component", "database")
 
+type Task struct {
+    ID          int    `json:"id"`
+    Title       string `json:"title"`
+    Description string `json:"description"`
+    Completed   bool   `json:"completed"`
+}
+
 func InitDB() error {
-	// Usamos ruta absoluta directa (sin filepath)
 	dbPath := "/Users/macbookair2020/documents/PlanDeAprendizaje-main/backend/internal/database/tasks.db"
 	log.Infof("📂 Ruta de la DB: %s", dbPath)
 
@@ -39,10 +46,7 @@ func InitDB() error {
 	return nil
 }
 
-// ... (resto de tus funciones CRUD)
-
-// CreateTask inserta una nueva tarea en la DB
-func CreateTask(task models.Task) (int64, error) {
+func CreateTask(task Task) (int64, error) {
 	result, err := db.Exec(
 		"INSERT INTO tasks (title, description, completed) VALUES (?, ?, ?)",
 		task.Title, task.Description, task.Completed,
@@ -60,16 +64,16 @@ func CreateTask(task models.Task) (int64, error) {
 }
 
 // GetTasks obtiene todas las tareas de la DB
-func GetTasks() ([]models.Task, error) {
+func GetTasks() ([]Task, error) {
 	rows, err := db.Query("SELECT id, title, description, completed FROM tasks")
 	if err != nil {
 		return nil, fmt.Errorf("error al consultar tareas: %v", err)
 	}
 	defer rows.Close()
 
-	var tasks []models.Task
+	var tasks []Task
 	for rows.Next() {
-		var t models.Task
+		var t Task
 		if err := rows.Scan(&t.ID, &t.Title, &t.Description, &t.Completed); err != nil {
 			return nil, fmt.Errorf("error al leer tarea: %v", err)
 		}
@@ -84,28 +88,38 @@ func GetTasks() ([]models.Task, error) {
 }
 
 // GetTaskByID obtiene una tarea por su ID
-func GetTaskByID(id int) (models.Task, error) {
-	var task models.Task
+func GetTaskByID(id int) (Task, error) {
+	var task Task
 	err := db.QueryRow(
 		"SELECT id, title, description, completed FROM tasks WHERE id = ?",
 		id,
 	).Scan(&task.ID, &task.Title, &task.Description, &task.Completed)
 
 	if err != nil {
-		return models.Task{}, fmt.Errorf("error al obtener tarea %d: %v", id, err)
+		return Task{}, fmt.Errorf("error al obtener tarea %d: %v", id, err)
 	}
 
 	return task, nil
 }
 
-// UpdateTask actualiza una tarea existente
-func UpdateTask(id int, task models.Task) error {
-	_, err := db.Exec(
+// UpdateTask con transacción
+func UpdateTask(id int, task Task) error {
+	tx, err := db.Begin()
+	if err != nil {
+		return fmt.Errorf("error al iniciar transacción: %v", err)
+	}
+	defer tx.Rollback() 
+
+	_, err = tx.Exec(
 		"UPDATE tasks SET title = ?, description = ?, completed = ? WHERE id = ?",
 		task.Title, task.Description, task.Completed, id,
 	)
 	if err != nil {
-		return fmt.Errorf("error al actualizar tarea %d: %v", id, err)
+		return err
+	}
+
+	if err = tx.Commit(); err != nil {
+		return fmt.Errorf("error al confirmar transacción: %v", err)
 	}
 	return nil
 }
@@ -124,3 +138,5 @@ func CloseDB() {
 	db.Close()
 	log.Println("🔌 Conexión a DB cerrada")
 }
+
+

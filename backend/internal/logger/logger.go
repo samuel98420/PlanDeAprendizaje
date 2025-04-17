@@ -19,7 +19,6 @@ func Init() {
 	Logger.SetOutput(os.Stdout)
 }
 
-// LogRequest registra información de la petición
 func LogRequest(r *http.Request) {
 	Logger.WithFields(logrus.Fields{
 		"method": r.Method,
